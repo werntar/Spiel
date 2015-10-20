@@ -8,10 +8,10 @@ import java.awt.image.BufferStrategy;
 public class Main {
     public static void main(String[] args) {
         Frame frame = new Frame();
-        frame.setSize(800, 600);
+        frame.pack();
         frame.setDefaultCloseOperation(3); //3= das schlieﬂt sich wenn man aufs x klickt//
         frame.setLocation(500, 200);
-        frame.setResizable(false);
+        frame.setResizable(true);
         frame.setVisible(true);
 
         frame.getStrat();

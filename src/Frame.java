@@ -34,7 +34,7 @@ import java.awt.image.BufferStrategy;
         public void draw(Graphics g)
         {
             g.setColor(ColorUIResource.blue);
-            g.fillRect(100,30,50,50);
+            g.fill3DRect(100,70,89,20,true);
         }
 
 
