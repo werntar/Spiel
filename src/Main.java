@@ -14,8 +14,18 @@ public class Main {
         frame.setResizable(false);
         frame.setVisible(true);
 
-        new(Frame);
-        frame.makestrat;
+        frame.getStrat();
+
+        while (true)
+        {
+            frame.repaint();
+
+            try {
+                Thread.sleep(10);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
 
 
     }
