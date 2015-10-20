@@ -2,7 +2,6 @@ import javax.swing.*;
 import javax.swing.*;
 import javax.swing.plaf.ColorUIResource;
 import java.awt.*;
-import java.awt.Frame;
 import java.awt.image.BufferStrategy;
 
 public class Main {
@@ -16,8 +15,7 @@ public class Main {
 
         frame.getStrat();
 
-        while (true)
-        {
+        while (true) {
             frame.repaint();
 
             try {
@@ -26,39 +24,7 @@ public class Main {
                 e.printStackTrace();
             }
         }
-
-
     }
-
-    public static class Frame extends JFrame {
-        private BufferStrategy strat;
-
-        public Frame() {
-            super("Baum im Raum");
-
-        }
-
-        public BufferStrategy getStrat() {
-            createBufferStrategy(2);
-            strat = getBufferStrategy();
-            return strat;
-        }
-
-        public void repaint() {
-            Graphics g = strat.getDrawGraphics();
-            draw(g);
-            g.dispose();
-            strat.show();
-        }
-
-        public void draw(Graphics g) {
-            g.setColor(ColorUIResource.blue);
-            g.fillRect(100, 30, 50, 50);
-        }
-
-
-    }
-
 }
 
 
